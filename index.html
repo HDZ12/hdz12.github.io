@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>赵东辉 - 个人简历</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(ellipse at top, #021024, #031b33, #000c1a);
+    color: #e0f7fa;
+  }
+  header, main, footer {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo-box {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(to bottom right, #00bcd4, #2196f3, #3f51b5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-weight: bold;
+    color: #000;
+  }
+  nav a {
+    color: #80deea;
+    margin-left: 15px;
+    text-decoration: none;
+  }
+  nav a:hover {
+    color: #4dd0e1;
+  }
+  h1 span {
+    background: linear-gradient(to right, #00e5ff, #29b6f6, #3f51b5);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .skills span {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background: rgba(0, 188, 212, 0.2);
+    border-radius: 15px;
+    color: #b2ebf2;
+  }
+  .project, .contact, .education {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+  .project h3, .contact h3, .education h3 {
+    color: #4dd0e1;
+  }
+  footer {
+    text-align: center;
+    font-size: 14px;
+    color: #80deea;
+    padding: 20px 0;
+  }
+  input, textarea, button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+  }
+  input, textarea {
+    background: rgba(255,255,255,0.1);
+    color: #e0f7fa;
+  }
+  button {
+    background: linear-gradient(to right, #00bcd4, #2196f3);
+    color: #fff;
+    cursor: pointer;
+  }
+  button:hover {
+    background: linear-gradient(to right, #4dd0e1, #42a5f5);
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <div class="logo-box">HDZ</div>
+    <div>
+      <div>赵东辉</div>
+      <small>个人简历</small>
+    </div>
+  </div>
+  <nav>
+    <a href="https://github.com/HDZ12" target="_blank">GitHub</a>
+    <a href="mailto:2219479402@qq.com">邮箱</a>
+    <a href="https://hdz12.github.io" target="_blank">主页</a>
+  </nav>
+</header>
+<main>
+  <section>
+    <h1>Hi，我是 <span>赵东辉</span></h1>
+    <p>欢迎来到我的个人简历主页。</p>
+  </section>
+  <section class="education">
+    <h3>教育背景</h3>
+    <p><strong>本科：</strong> 大连海事大学 - 数据科学与大数据技术（2021.09 - 2025.07）</p>
+    <p><strong>硕士：</strong> 哈尔滨工业大学 - 计算机技术（2025.09 - 至今）</p>
+  </section>
+  <section class="skills">
+    <h3>技能</h3>
+    <span>Hadoop</span><span>Spark</span><span>Java</span><span>Python</span><span>MySQL</span><span>Linux</span><span>数据可视化</span><span>分布式计算</span>
+  </section>
+  <section>
+    <h3>项目经验</h3>
+    <div class="project">
+      <strong>自然图像补全研究</strong>
+      <p>低秩张量补全算法优化，处理大面积及连续缺失</p>
+    </div>
+    <div class="project">
+      <strong>智能手机用户监测分析</strong>
+      <p>Hadoop + Java 分布式数据处理与用户画像</p>
+    </div>
+    <div class="project">
+      <strong>日程管理系统</strong>
+      <p>Vue + Java Web 前后端分离，日程分类与通知</p>
+    </div>
+  </section>
+  <section class="contact">
+    <h3>联系我</h3>
+    <p>电话：13109863687</p>
+    <p>邮箱：2219479402@qq.com</p>
+    <p>GitHub：github.com/HDZ12</p>
+    <form onsubmit="alert('表单提交成功'); return false;">
+      <input type="text" placeholder="你的名字">
+      <input type="email" placeholder="你的邮箱">
+      <textarea placeholder="你的信息"></textarea>
+      <button type="submit">发送</button>
+    </form>
+  </section>
+</main>
+<footer>
+  © 2025 赵东辉 · 个人简历
+</footer>
