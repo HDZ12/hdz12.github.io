@@ -144,14 +144,85 @@
     <p>电话：13109863687</p>
     <p>邮箱：2219479402@qq.com</p>
     <p>GitHub：github.com/HDZ12</p>
-    <form onsubmit="alert('表单提交成功'); return false;">
-      <input type="text" placeholder="你的名字">
-      <input type="email" placeholder="你的邮箱">
-      <textarea placeholder="你的信息"></textarea>
-      <button type="submit">发送</button>
-    </form>
+    <!-- 已移除表单，改为动态地球 -->
+      <div id="globe" style="height:360px; border-radius:12px; overflow:hidden; background: radial-gradient(circle at 20% 20%, rgba(0,188,212,0.06), transparent);"></div>
   </section>
 </main>
 <footer>
   © 2025 赵东辉 · 个人简历
 </footer>
+  © 2025 赵东辉 · 个人简历
+</footer>
+
+<!-- Three.js 动态地球脚本 -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/controls/OrbitControls.js"></script>
+<script>
+(function(){
+  const container = document.getElementById('globe');
+  if(!container) return;
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.setPixelRatio(window.devicePixelRatio ? window.devicePixelRatio : 1);
+  container.appendChild(renderer.domElement);
+
+  // 地球
+  const geometry = new THREE.SphereGeometry(3, 64, 64);
+  const textureLoader = new THREE.TextureLoader();
+  const material = new THREE.MeshPhongMaterial({
+    map: textureLoader.load('https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg'),
+    specular: new THREE.Color('grey'),
+    shininess: 5
+  });
+  const earth = new THREE.Mesh(geometry, material);
+  scene.add(earth);
+
+  // 大气光晕（简单）
+  const atmosphereMat = new THREE.MeshBasicMaterial({
+    color: 0x66ccff,
+    transparent: true,
+    opacity: 0.08,
+    side: THREE.BackSide
+  });
+  const atmosphere = new THREE.Mesh(new THREE.SphereGeometry(3.05, 64, 64), atmosphereMat);
+  scene.add(atmosphere);
+
+  // 光源
+  const ambient = new THREE.AmbientLight(0xffffff, 0.6);
+  scene.add(ambient);
+  const point = new THREE.PointLight(0xffffff, 0.8);
+  point.position.set(5,5,5);
+  scene.add(point);
+
+  camera.position.set(0, 0, 8);
+
+  // 控制器
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.enableZoom = true;
+  controls.minDistance = 4;
+  controls.maxDistance = 20;
+
+  // 自转动画
+  function animate(){
+    requestAnimationFrame(animate);
+    earth.rotation.y += 0.0012;
+    controls.update();
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  // 响应式
+  window.addEventListener('resize', ()=>{
+    const w = container.clientWidth;
+    const h = container.clientHeight;
+    renderer.setSize(w,h);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  });
+})();
+</script>
+</body>
+</html>
