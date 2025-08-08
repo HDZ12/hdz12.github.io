@@ -73,25 +73,12 @@
     color: #80deea;
     padding: 20px 0;
   }
-  input, textarea, button {
+  #globeCanvas {
     width: 100%;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    font-size: 14px;
-  }
-  input, textarea {
-    background: rgba(255,255,255,0.1);
-    color: #e0f7fa;
-  }
-  button {
-    background: linear-gradient(to right, #00bcd4, #2196f3);
-    color: #fff;
-    cursor: pointer;
-  }
-  button:hover {
-    background: linear-gradient(to right, #4dd0e1, #42a5f5);
+    height: 360px;
+    border-radius: 12px;
+    display: block;
+    background: radial-gradient(circle at 20% 20%, rgba(0,188,212,0.06), transparent);
   }
 </style>
 </head>
@@ -144,84 +131,42 @@
     <p>电话：13109863687</p>
     <p>邮箱：2219479402@qq.com</p>
     <p>GitHub：github.com/HDZ12</p>
-    <!-- 已移除表单，改为动态地球 -->
-      <div id="globe" style="height:360px; border-radius:12px; overflow:hidden; background: radial-gradient(circle at 20% 20%, rgba(0,188,212,0.06), transparent);"></div>
+    <canvas id="globeCanvas"></canvas>
   </section>
 </main>
 <footer>
   © 2025 赵东辉 · 个人简历
 </footer>
-  © 2025 赵东辉 · 个人简历
-</footer>
 
-<!-- Three.js 动态地球脚本 -->
-<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/controls/OrbitControls.js"></script>
 <script>
 (function(){
-  const container = document.getElementById('globe');
-  if(!container) return;
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
-  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-  renderer.setSize(container.clientWidth, container.clientHeight);
-  renderer.setPixelRatio(window.devicePixelRatio ? window.devicePixelRatio : 1);
-  container.appendChild(renderer.domElement);
-
-  // 地球
-  const geometry = new THREE.SphereGeometry(3, 64, 64);
-  const textureLoader = new THREE.TextureLoader();
-  const material = new THREE.MeshPhongMaterial({
-    map: textureLoader.load('https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg'),
-    specular: new THREE.Color('grey'),
-    shininess: 5
-  });
-  const earth = new THREE.Mesh(geometry, material);
-  scene.add(earth);
-
-  // 大气光晕（简单）
-  const atmosphereMat = new THREE.MeshBasicMaterial({
-    color: 0x66ccff,
-    transparent: true,
-    opacity: 0.08,
-    side: THREE.BackSide
-  });
-  const atmosphere = new THREE.Mesh(new THREE.SphereGeometry(3.05, 64, 64), atmosphereMat);
-  scene.add(atmosphere);
-
-  // 光源
-  const ambient = new THREE.AmbientLight(0xffffff, 0.6);
-  scene.add(ambient);
-  const point = new THREE.PointLight(0xffffff, 0.8);
-  point.position.set(5,5,5);
-  scene.add(point);
-
-  camera.position.set(0, 0, 8);
-
-  // 控制器
-  const controls = new THREE.OrbitControls(camera, renderer.domElement);
-  controls.enableDamping = true;
-  controls.enableZoom = true;
-  controls.minDistance = 4;
-  controls.maxDistance = 20;
-
-  // 自转动画
-  function animate(){
-    requestAnimationFrame(animate);
-    earth.rotation.y += 0.0012;
-    controls.update();
-    renderer.render(scene, camera);
+  const canvas = document.getElementById('globeCanvas');
+  const ctx = canvas.getContext('2d');
+  let width, height;
+  function resize(){
+    width = canvas.clientWidth;
+    height = canvas.clientHeight;
+    canvas.width = width;
+    canvas.height = height;
   }
-  animate();
+  window.addEventListener('resize', resize);
+  resize();
 
-  // 响应式
-  window.addEventListener('resize', ()=>{
-    const w = container.clientWidth;
-    const h = container.clientHeight;
-    renderer.setSize(w,h);
-    camera.aspect = w / h;
-    camera.updateProjectionMatrix();
-  });
+  const img = new Image();
+  img.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/600px-The_Earth_seen_from_Apollo_17.jpg';
+  let angle = 0;
+  function draw(){
+    ctx.clearRect(0, 0, width, height);
+    ctx.save();
+    ctx.translate(width/2, height/2);
+    ctx.rotate(angle);
+    const size = Math.min(width, height) * 0.9;
+    ctx.drawImage(img, -size/2, -size/2, size, size);
+    ctx.restore();
+    angle += 0.002;
+    requestAnimationFrame(draw);
+  }
+  img.onload = draw;
 })();
 </script>
 </body>
