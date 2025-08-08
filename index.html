@@ -50,7 +50,10 @@
     -webkit-background-clip: text;
     color: transparent;
   }
-  .skills span {
+  section {
+    margin-bottom: 20px;
+  }
+  .skills span, .awards span {
     display: inline-block;
     margin: 5px;
     padding: 5px 10px;
@@ -58,13 +61,12 @@
     border-radius: 15px;
     color: #b2ebf2;
   }
-  .project, .contact, .education {
+  .block {
     background: rgba(255,255,255,0.05);
     padding: 15px;
     border-radius: 12px;
-    margin-bottom: 20px;
   }
-  .project h3, .contact h3, .education h3 {
+  .block h3 {
     color: #4dd0e1;
   }
   footer {
@@ -72,13 +74,6 @@
     font-size: 14px;
     color: #80deea;
     padding: 20px 0;
-  }
-  #globe-container {
-    width: 100%;
-    height: 400px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #000;
   }
 </style>
 </head>
@@ -102,85 +97,53 @@
     <h1>Hi，我是 <span>赵东辉</span></h1>
     <p>欢迎来到我的个人简历主页。</p>
   </section>
-  <section class="education">
+
+  <section class="block">
     <h3>教育背景</h3>
     <p><strong>本科：</strong> 大连海事大学 - 数据科学与大数据技术（2021.09 - 2025.07）</p>
     <p><strong>硕士：</strong> 哈尔滨工业大学 - 计算机技术（2025.09 - 至今）</p>
   </section>
-  <section class="skills">
+
+  <section class="block skills">
     <h3>技能</h3>
     <span>Hadoop</span><span>Spark</span><span>Java</span><span>Python</span><span>MySQL</span><span>Linux</span><span>数据可视化</span><span>分布式计算</span>
   </section>
-  <section>
+
+  <section class="block awards">
+    <h3>获奖情况</h3>
+    <span>第十四届全国大学生数学竞赛 全国二等奖</span>
+    <span>第二届“钉钉杯”大数据挑战赛（本科组）全国三等奖</span>
+    <span>中国大学生数学建模竞赛 辽宁省二等奖</span>
+    <span>大连海事大学单项奖学金（竞赛类）</span>
+    <span>大学生创新创业大赛（国家级项目）</span>
+    <span>CET-4</span>
+  </section>
+
+  <section class="block">
     <h3>项目经验</h3>
-    <div class="project">
+    <div>
       <strong>自然图像补全研究</strong>
-      <p>低秩张量补全算法优化，处理大面积及连续缺失</p>
+      <p>低秩张量补全算法优化，处理大面积及连续缺失。</p>
     </div>
-    <div class="project">
+    <div>
       <strong>智能手机用户监测分析</strong>
-      <p>Hadoop + Java 分布式数据处理与用户画像</p>
+      <p>Hadoop + Java 分布式数据处理与用户画像。</p>
     </div>
-    <div class="project">
+    <div>
       <strong>日程管理系统</strong>
-      <p>Vue + Java Web 前后端分离，日程分类与通知</p>
+      <p>Vue + Java Web 前后端分离，日程分类与通知。</p>
     </div>
   </section>
-  <section class="contact">
+
+  <section class="block">
     <h3>联系我</h3>
     <p>电话：13109863687</p>
     <p>邮箱：2219479402@qq.com</p>
     <p>GitHub：github.com/HDZ12</p>
-    <div id="globe-container"></div>
   </section>
 </main>
 <footer>
   © 2025 赵东辉 · 个人简历
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/controls/OrbitControls.js"></script>
-<script>
-(function(){
-  const container = document.getElementById('globe-container');
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(45, container.clientWidth/container.clientHeight, 0.1, 1000);
-  const renderer = new THREE.WebGLRenderer({antialias:true});
-  renderer.setSize(container.clientWidth, container.clientHeight);
-  container.appendChild(renderer.domElement);
-
-  const geometry = new THREE.SphereGeometry(3, 64, 64);
-  const texture = new THREE.TextureLoader().load('https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg');
-  const material = new THREE.MeshPhongMaterial({map: texture});
-  const earth = new THREE.Mesh(geometry, material);
-  scene.add(earth);
-
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-  scene.add(ambientLight);
-  const pointLight = new THREE.PointLight(0xffffff, 1);
-  pointLight.position.set(10,10,10);
-  scene.add(pointLight);
-
-  camera.position.z = 8;
-
-  const controls = new THREE.OrbitControls(camera, renderer.domElement);
-  controls.enableDamping = true;
-  controls.dampingFactor = 0.05;
-  controls.enableZoom = true;
-
-  function animate(){
-    requestAnimationFrame(animate);
-    earth.rotation.y += 0.0015;
-    controls.update();
-    renderer.render(scene, camera);
-  }
-  animate();
-
-  window.addEventListener('resize', ()=>{
-    camera.aspect = container.clientWidth/container.clientHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(container.clientWidth, container.clientHeight);
-  });
-})();
-</script>
 </body>
 </html>
