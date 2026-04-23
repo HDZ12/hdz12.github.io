@@ -1,0 +1,22 @@
+{
+  "name": "hdz",
+  "description": "hdz's blog",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "docs:build": "vuepress-vite build src",
+    "docs:clean-dev": "vuepress-vite dev src --clean-cache",
+    "docs:dev": "vuepress-vite dev src",
+    "docs:update-package": "npx vp-update"
+  },
+  "devDependencies": {
+    "@mathjax/src": "^4.1.1",
+    "@vuepress/bundler-vite": "2.0.0-rc.28",
+    "katex": "^0.16.45",
+    "sass-embedded": "^1.98.0",
+    "vue": "^3.5.31",
+    "vuepress": "2.0.0-rc.28",
+    "vuepress-theme-hope": "2.0.0-rc.106"
+  }
+}
