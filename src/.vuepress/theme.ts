@@ -32,7 +32,7 @@ export default hopeTheme({
   // 博客相关
   blog: {
     description: "Agent/后端开发",
-    intro: "/demo/intro.html",
+    intro: "/intro.html",
     medias: {
       Email: "mailto:2219479402@qq.com",
       GitHub: "https://github.com/HDZ12",

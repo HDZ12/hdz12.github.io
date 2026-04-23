@@ -1,8 +1,8 @@
 ---
-title: 学习笔记
+title: JAVA
 index: false
 article: false
 icon: book
 ---
 
-<Catalog :level="1" />
+<Catalog />

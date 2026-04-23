@@ -4,37 +4,52 @@ export default sidebar({
   "/": [
     "",
     "/intro",
-    // {
-    //   text: "需求笔记",
-    //   icon: "laptop-code",
-    //   link: "/demo/",
-    // },
-    // {
-    //   text: "代码笔记",
-    //   icon: "book",
-    //   link: "/project/",
-    // },
-    // {
-    //   text: "文章",
-    //   icon: "pen-to-square",
-    //   link: "/posts/",
-    // },
   ],
 
   "/demo/": [
     {
-      text: "Java基础",
-      icon: "laptop-code",
-      prefix: "/demo/",
-      link: "/demo/",
-      children: ["layout"],
+      text: "JAVA",
+      icon: "mug-hot",
+      prefix: "/demo/JAVA/",
+      link: "",
+      collapsible: true,
+      expanded: false,
+      children: ["集合"],
+    },
+    {
+      text: "Algorithm",
+      icon: "calculator",
+      prefix: "/demo/Algorithm/",
+      link: "",
+      collapsible: true,
+      expanded: false,
+      children: [
+        {
+          text: "贪心算法",
+          icon: "lightbulb",
+          prefix: "贪心算法/",
+          link: "",
+          collapsible: true,
+          expanded: false,
+          children: ["理论"],
+        },
+      ],
+    },
+    {
+      text: "Agent",
+      icon: "robot",
+      prefix: "/demo/Agent/",
+      link: "",
+      collapsible: true,
+      expanded: false,
+      children: ["React"],
     },
   ],
 
   "/project/": [
     {
       text: "paicli",
-      icon: "book",
+      icon: "diagram-project",
       link: "/project/",
     },
   ],
