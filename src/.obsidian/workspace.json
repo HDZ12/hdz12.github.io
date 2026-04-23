@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3b469642f71a7d8b",
+        "id": "a0422fd0f0aac73a",
         "type": "tabs",
         "children": [
           {
-            "id": "d1634572dbc29a45",
+            "id": "a6dc525ddba61ac5",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -176,8 +176,15 @@
       "bases:新建数据库": false
     }
   },
-  "active": "d1634572dbc29a45",
+  "active": "a6dc525ddba61ac5",
   "lastOpenFiles": [
+    "demo/JAVA/java概述.md",
+    "附件/Pasted image 20260423214922.png",
+    "附件/Pasted image 20260423213833.png",
+    "附件",
+    "未命名.md",
+    "未命名",
+    "attachment",
     "demo/Algorithm/Greedy/Theory.md",
     "demo/Algorithm/Greedy/README.md",
     "demo/Algorithm/Greedy",
@@ -185,7 +192,6 @@
     "demo/Algorithm/贪心算法",
     "demo/Algorithm/README.md",
     "demo/Algorithm",
-    "demo/JAVA/集合.md",
     "demo/JAVA/README.md",
     "demo/JAVA",
     "demo/JAVA基础/README.md",
