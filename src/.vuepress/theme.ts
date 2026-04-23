@@ -14,9 +14,10 @@ export default hopeTheme({
 
   logo: "/assets/images/HDZ.png",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "https://github.com/HDZ12/hdz12.github.io",
 
   docsDir: "src",
+  docsBranch: "main",
 
   // 导航栏
   navbar: ["/", "/demo/", "/project/"],
