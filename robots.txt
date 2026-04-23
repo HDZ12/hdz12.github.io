@@ -1,0 +1,4 @@
+User-agent:*
+Disallow:
+
+Sitemap: https://hdz12.github.io/sitemap.xml
