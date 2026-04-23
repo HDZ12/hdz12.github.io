@@ -1,10 +1,10 @@
-
 name: 部署文档
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -17,32 +17,27 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          # 如果你文档需要 Git 子模块，取消注释下一行
-          # submodules: true
 
-
-
-      - name: 设置 Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
 
-      - name: 安装依赖
+      - name: Install deps
         run: |
           corepack enable
           npm ci
 
-      - name: 构建文档
+      - name: Build docs
         env:
           NODE_OPTIONS: --max_old_space_size=8192
-        run: |-
+        run: |
           npm run docs:build
-          > src\.vuepress\dist\.nojekyll
+          touch src/.vuepress/dist/.nojekyll
 
-      - name: 部署文档
+      - name: Deploy docs
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # 部署文档
           branch: gh-pages
-          folder: src\.vuepress\dist
+          folder: src/.vuepress/dist
