@@ -14,7 +14,7 @@ export default sidebar({
       link: "",
       collapsible: true,
       expanded: false,
-      children: ["java概述"],
+      children: ["java概述","基础语法","面向对象"],
     },
     {
       text: "Algorithm",
