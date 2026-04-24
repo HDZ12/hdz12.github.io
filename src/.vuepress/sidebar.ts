@@ -31,7 +31,7 @@ export default sidebar({
           link: "",
           collapsible: true,
           expanded: false,
-          children: ["理论"],
+          children: ["理论","分发饼干","摆动序列"],
         },
       ],
     },
