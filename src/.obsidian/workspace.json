@@ -183,6 +183,8 @@
   },
   "active": "a6dc525ddba61ac5",
   "lastOpenFiles": [
+    "附件/javase-16.png",
+    "附件/javase-15.png",
     "demo/Algorithm/贪心算法/买卖股票的最佳时机Ⅱ.md",
     "demo/Algorithm/贪心算法/买卖股票的最佳时机.md",
     "demo/Algorithm/贪心算法/最大子数组.md",
@@ -221,7 +223,6 @@
     "demo/layout.md",
     "demo/Agent",
     "README.md",
-    "intro.md",
-    "project/README.md"
+    "intro.md"
   ]
 }
