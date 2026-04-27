@@ -42,7 +42,7 @@ export default sidebar({
       link: "",
       collapsible: true,
       expanded: false,
-      children: ["React"],
+      children: ["tool"],
     },
   ],
 

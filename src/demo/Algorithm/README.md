@@ -5,4 +5,4 @@ article: false
 icon: calculator
 ---
 
-<Catalog />
+<Catalog :level="1" />
