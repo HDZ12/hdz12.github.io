@@ -184,6 +184,10 @@
   },
   "active": "a6dc525ddba61ac5",
   "lastOpenFiles": [
+    "demo/Tool/README.md",
+    "demo/Tool/git.md",
+    "demo/Tool/READEME.md",
+    "demo/Tool",
     "demo/JAVA/Object.md",
     "demo/JAVA/Integer.md",
     "demo/JAVA/Integer,md",
@@ -222,10 +226,6 @@
     "demo/Algorithm/README.md",
     "demo/Algorithm",
     "demo/JAVA/README.md",
-    "demo/JAVA",
-    "demo/JAVA基础/README.md",
-    "demo/Agent/React.md",
-    "demo/README.md",
-    "demo/JAVA基础"
+    "demo/JAVA"
   ]
 }

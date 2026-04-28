@@ -1,8 +1,8 @@
 ---
-title: Agent
+title: Tool
 index: false
 article: false
-icon: robot
+icon: carbon:tool-kit
 ---
 
 <Catalog />

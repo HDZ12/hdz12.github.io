@@ -44,6 +44,15 @@ export default sidebar({
       expanded: false,
       children: ["tool"],
     },
+    {
+      text: "Tool",
+      icon: "carbon:tool-kit",
+      prefix: "/demo/Tool/",
+      link: "",
+      collapsible: true,
+      expanded: false,
+      children: ["git"],
+    },
   ],
 
   "/project/": [
