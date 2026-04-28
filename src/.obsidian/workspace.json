@@ -184,6 +184,11 @@
   },
   "active": "a6dc525ddba61ac5",
   "lastOpenFiles": [
+    "demo/JAVA/Object.md",
+    "demo/JAVA/Integer.md",
+    "demo/JAVA/Integer,md",
+    "demo/JAVA/String.md",
+    "demo/JAVA/String.ms",
     "demo/Algorithm/贪心算法/跳跃游戏Ⅱ.md",
     "demo/Algorithm/贪心算法/跳跃游戏.md",
     "demo/水论文.md",
@@ -221,10 +226,6 @@
     "demo/JAVA基础/README.md",
     "demo/Agent/React.md",
     "demo/README.md",
-    "demo/README.md.md",
-    "demo/JAVA基础/集合.md",
-    "demo/JAVA基础",
-    "demo/Agent/README.md.md",
-    "demo/Agent"
+    "demo/JAVA基础"
   ]
 }
