@@ -184,6 +184,9 @@
   },
   "active": "a6dc525ddba61ac5",
   "lastOpenFiles": [
+    "demo/Algorithm/贪心算法/跳跃游戏Ⅱ.md",
+    "demo/Algorithm/贪心算法/跳跃游戏.md",
+    "demo/水论文.md",
     "demo/Agent/README.md",
     "demo/JAVA/面向对象.md",
     "demo/Agent/tool.md",
@@ -222,9 +225,6 @@
     "demo/JAVA基础/集合.md",
     "demo/JAVA基础",
     "demo/Agent/README.md.md",
-    "demo/layout.md",
-    "demo/Agent",
-    "README.md",
-    "intro.md"
+    "demo/Agent"
   ]
 }

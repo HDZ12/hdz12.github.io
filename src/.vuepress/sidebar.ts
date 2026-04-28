@@ -31,7 +31,7 @@ export default sidebar({
           link: "",
           collapsible: true,
           expanded: false,
-          children: ["理论","分发饼干","摆动序列","最大子数组","买卖股票的最佳时机Ⅱ"],
+          children: ["理论","分发饼干","摆动序列","最大子数组","买卖股票的最佳时机Ⅱ","跳跃游戏","跳跃游戏Ⅱ"],
         },
       ],
     },
