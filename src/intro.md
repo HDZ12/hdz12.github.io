@@ -1,6 +1,7 @@
 ---
 icon: circle-info
 cover: /github.png
+sticky: true
 ---
 
 # HDZ
