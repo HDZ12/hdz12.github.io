@@ -53,6 +53,7 @@ export default sidebar({
       expanded: false,
       children: ["git"],
     },
+    // "/intro",
   ],
 
   "/project/": [

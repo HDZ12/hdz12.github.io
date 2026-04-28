@@ -26,7 +26,7 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "Copyright © 2026 HDZ",
+  footer: "Activity is the only to knowledge.",
   displayFooter: true,
 
   // 博客相关
