@@ -2,6 +2,7 @@
 title: AgentTool
 index: true
 article: true
+star: true
 category:
   - agent
 tags:
