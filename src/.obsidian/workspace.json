@@ -184,6 +184,9 @@
   },
   "active": "a6dc525ddba61ac5",
   "lastOpenFiles": [
+    "demo/Algorithm/贪心算法/加油站.md",
+    "demo/Algorithm/贪心算法/K次取反后最大化的数组和.md",
+    "demo/Algorithm/贪心算法/Kci",
     "demo/Tool/README.md",
     "demo/Tool/git.md",
     "demo/Tool/READEME.md",
@@ -223,9 +226,6 @@
     "demo/Algorithm/Greedy/README.md",
     "demo/Algorithm/Greedy",
     "demo/Algorithm/贪心算法",
-    "demo/Algorithm/README.md",
-    "demo/Algorithm",
-    "demo/JAVA/README.md",
-    "demo/JAVA"
+    "demo/Algorithm"
   ]
 }
