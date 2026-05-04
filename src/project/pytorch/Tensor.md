@@ -21,8 +21,8 @@ x = torch.tensor([[1, 2, 3],
 
 a = torch.zeros(2, 3)
 b = torch.ones(2, 3)
-c = torch.randn(2, 3)
-d = torch.rand(2, 3)
+c = torch.randn(2, 3) #标准正态分布
+d = torch.rand(2, 3)  #0-1之间随机
 
 
 # =========================
@@ -35,7 +35,7 @@ shape = x.shape
 dim = x.ndim
 dtype = x.dtype
 device = x.device
-num = x.numel()
+num = x.numel()  
 
 
 # =========================
