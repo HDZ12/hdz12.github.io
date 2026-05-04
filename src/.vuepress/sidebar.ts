@@ -53,6 +53,15 @@ export default sidebar({
       expanded: false,
       children: ["git"],
     },
+    {
+      text: "llm",
+      icon: "brain",
+      prefix: "/demo/llm/",
+      link: "",
+      collapsible: true,
+      expanded: false,
+      children: ["机器学习"],
+    },
     // "/intro",
   ],
 
