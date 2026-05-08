@@ -54,6 +54,15 @@ export default sidebar({
       children: ["git"],
     },
     {
+      text: "MYSQL",
+      icon: "database",
+      prefix: "/demo/MYSQL/",
+      link: "",
+      collapsible: true,
+      expanded: false,
+      children: ["MYSQL基础","数据库架构","存储引擎","日志"],
+    },
+    {
       text: "llm",
       icon: "brain",
       prefix: "/demo/llm/",
