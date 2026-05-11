@@ -89,5 +89,14 @@ export default sidebar({
       expanded: false,
       children: ["Tensor"],
     },
+    {
+      text: "AgriBrain",
+      icon: "seedling",
+      prefix: "/project/AgriBrain/",
+      link: "",
+      collapsible: true,
+      expanded: false,
+      children: [],
+    },
   ],
 });
