@@ -96,7 +96,7 @@ export default sidebar({
       link: "",
       collapsible: true,
       expanded: false,
-      children: [],
+      children: ["项目介绍","Memory"],
     },
   ],
 });
