@@ -76,11 +76,6 @@ export default sidebar({
 
   "/project/": [
     {
-      text: "paicli",
-      icon: "diagram-project",
-      link: "/project/",
-    },
-    {
       text: "pytorch",
       icon: "fire",
       prefix: "/project/pytorch/",
