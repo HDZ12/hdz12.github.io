@@ -60,7 +60,7 @@ export default sidebar({
       link: "",
       collapsible: true,
       expanded: false,
-      children: ["MYSQL基础","数据库架构","存储引擎","日志","SQL优化","索引"],
+      children: ["MYSQL基础","数据库架构","存储引擎","日志","SQL优化","索引","锁","事务","高并发","运维"],
     },
     {
       text: "llm",
