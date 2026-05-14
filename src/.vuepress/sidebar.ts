@@ -63,6 +63,15 @@ export default sidebar({
       children: ["MYSQL基础","数据库架构","存储引擎","日志","SQL优化","索引","锁","事务","高并发","运维"],
     },
     {
+      text: "Redis",
+      icon: "simple-icons:redis",
+      prefix: "/demo/redis/",
+      link: "",
+      collapsible: true,
+      expanded: false,
+      children: [],
+    },
+    {
       text: "llm",
       icon: "brain",
       prefix: "/demo/llm/",
@@ -75,6 +84,15 @@ export default sidebar({
   ],
 
   "/project/": [
+    {
+      text: "26'ICAUS",
+      icon: "tower-broadcast",
+      prefix: "/project/26'ICAUS/",
+      link: "",
+      collapsible: true,
+      expanded: false,
+      children: ["介绍"],
+    },
     {
       text: "pytorch",
       icon: "fire",
