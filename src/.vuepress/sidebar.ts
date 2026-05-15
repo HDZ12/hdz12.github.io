@@ -91,7 +91,7 @@ export default sidebar({
       link: "",
       collapsible: true,
       expanded: false,
-      children: ["介绍"],
+      children: ["介绍","ubuntu配置","小车操控"],
     },
     {
       text: "pytorch",
