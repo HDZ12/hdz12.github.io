@@ -69,7 +69,7 @@ export default sidebar({
       link: "",
       collapsible: true,
       expanded: false,
-      children: ["介绍"],
+      children: ["介绍","持久化","高可用"],
     },
     {
       text: "llm",
