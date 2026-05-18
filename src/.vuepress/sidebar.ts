@@ -87,7 +87,7 @@ export default sidebar({
       link: "",
       collapsible: true,
       expanded: false,
-      children: ["机器学习","pytorch"],
+      children: ["机器学习","pytorch","Attention"],
     },
     // "/intro",
   ],
