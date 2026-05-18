@@ -17,6 +17,15 @@ export default sidebar({
       children: ["java概述","基础语法","面向对象","String","Integer","Object","异常处理","IO","序列化","网络编程","泛型","反射","jdk18特性"],
     },
     {
+      text: "并发编程",
+      icon: "arrows-rotate",
+      prefix: "/demo/并发编程/",
+      link: "",
+      collapsible: true,
+      expanded: false,
+      children: ["基础"],
+    },
+    {
       text: "Algorithm",
       icon: "calculator",
       prefix: "/demo/Algorithm/",
