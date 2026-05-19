@@ -23,7 +23,7 @@ export default sidebar({
       link: "",
       collapsible: true,
       expanded: false,
-      children: ["基础"],
+      children: ["基础","TreadLocal","java内存机制"],
     },
     {
       text: "Algorithm",
@@ -78,7 +78,7 @@ export default sidebar({
       link: "",
       collapsible: true,
       expanded: false,
-      children: ["介绍","持久化","高可用","缓存击穿"],
+      children: ["介绍","持久化","高可用","缓存击穿","运维","redis应用"],
     },
     {
       text: "llm",
