@@ -78,7 +78,7 @@ export default sidebar({
       link: "",
       collapsible: true,
       expanded: false,
-      children: ["介绍","持久化","高可用","缓存击穿","运维","redis应用"],
+      children: ["介绍","持久化","高可用","缓存击穿","运维","redis应用","底层结构","补充"],
     },
     {
       text: "llm",
@@ -119,6 +119,15 @@ export default sidebar({
       collapsible: true,
       expanded: false,
       children: ["项目介绍","Memory"],
+    },
+    {
+      text: "minimind",
+      icon: "microchip",
+      prefix: "/project/minimind/",
+      link: "",
+      collapsible: true,
+      expanded: false,
+      children: [],
     },
   ],
 });
