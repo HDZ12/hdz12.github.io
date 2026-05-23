@@ -23,7 +23,7 @@ export default sidebar({
       link: "",
       collapsible: true,
       expanded: false,
-      children: ["基础","TreadLocal","java内存机制","锁"],
+      children: ["基础","TreadLocal","java内存机制","锁","并发工具类"],
     },
     {
       text: "Algorithm",
