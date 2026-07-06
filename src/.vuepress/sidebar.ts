@@ -87,7 +87,7 @@ export default sidebar({
       link: "",
       collapsible: true,
       expanded: false,
-      children: ["机器学习","pytorch","Attention"],
+      children: ["机器学习","pytorch","Attention","模型架构与基础原理"],
     },
     // "/intro",
   ],
@@ -100,7 +100,7 @@ export default sidebar({
       link: "",
       collapsible: true,
       expanded: false,
-      children: ["介绍","ubuntu配置","小车操控"],
+      children: ["介绍","ubuntu配置","小车操控","小车通信"],
     },
     {
       text: "pytorch",
