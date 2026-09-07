@@ -46,6 +46,10 @@ export default hopeTheme({
         hint: "26'ICAUS",
         password: "1234",
       },
+      "/demo/resume/": {
+        hint: "resume",
+        password: "0607",
+      },
     },
   },
 

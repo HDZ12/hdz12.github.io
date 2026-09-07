@@ -89,6 +89,15 @@ export default sidebar({
       expanded: false,
       children: ["机器学习","pytorch","Attention","模型架构与基础原理"],
     },
+    {
+      text: "resume",
+      icon: "address-card",
+      prefix: "/demo/resume/",
+      link: "",
+      collapsible: true,
+      expanded: false,
+      children: ["agriRag","kafka","SKILLRepository"],
+    },
     // "/intro",
   ],
 
